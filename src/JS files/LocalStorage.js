@@ -15,3 +15,10 @@ export const addToCart = (cart, bottle) => {
   saveCartToLocalStorage(newCart);
   return newCart;
 };
+
+// Remove item from cart by index
+export const removeFromCart = (cart, indexToRemove) => {
+  const newCart = cart.filter((_, index) => index !== indexToRemove);
+  saveCartToLocalStorage(newCart);
+  return newCart;
+};
